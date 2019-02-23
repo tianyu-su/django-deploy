@@ -107,10 +107,10 @@
 
 ## 帮助
 
-- 部署过程遇到错误 参考 `help/deploy-questions.md`
-- Linux 相关操作 参考 'help/linux.md'
+- 部署过程遇到错误 参考`help/deploy-questions.md`
+- Linux 相关操作 参考 `help/linux.md`
 
-##TODO
+## TODO
 
 - [ ] 建立虚拟环境默认系统版本，与项目python版本号不一致
 

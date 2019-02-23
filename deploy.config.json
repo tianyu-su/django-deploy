@@ -1,11 +1,11 @@
 {
-	"git-url": "https://github.com/BlackCatSheriff/GpsDisp.git",
-	"web-name": "GpsDisp",
-	"nginx-port": "7788",
+	"git-url": "https://xxxxx",
+	"web-name": "xxxx",
+	"nginx-port": "9998",
 	"nginx-server_name": "localhost",
-	"gunicorn-port": "9090",
-	"gunicorn-work-class": "gevent",
-	"test-page":"/index/",
+	"gunicorn-port": "8080",
+	"gunicorn-work-class": "gevnet",
+	"test-page":"/",
 	"get-server-ip": "http://ident.me/",
 	"python-mirror": "https://pypi.tuna.tsinghua.edu.cn/simple/"
 }
