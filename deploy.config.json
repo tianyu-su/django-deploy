@@ -1,11 +1,12 @@
 {
-	"git-url": "https://xxxxx",
+	"git-url": "xxxx",
 	"web-name": "xxxx",
-	"nginx-port": "9998",
+	"nginx-port": "xxxx",
 	"nginx-server_name": "localhost",
 	"gunicorn-port": "8080",
-	"gunicorn-work-class": "gevnet",
+	"gunicorn-work-class": "gevent",
 	"test-page":"/",
+	"python-version":"3",
 	"get-server-ip": "http://ident.me/",
 	"python-mirror": "https://pypi.tuna.tsinghua.edu.cn/simple/"
 }

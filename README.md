@@ -23,8 +23,11 @@
 | gunicorn-port       | gunicorn 本地服务器监听端口,默认`8080`                       |
 | gunicorn-work-class | gunicorn 工作模式: `sysc` 或者 `gevent`,默认 `gevent`        |
 | test-page           | 网站首页，用于测试部署结果， 默认 `/`                        |
+| python-version      | 项目 pyhton 版本号，默认 `3` ，也可以指定 `3.6.1`            |
 | get-server-ip       | Linux 下获取本机外网 IP 的网址，默认 `http://ident.me/`      |
 | python-mirror       | python 镜像网站, 默认 `https://pypi.tuna.tsinghua.edu.cn/simple/` |
+
+> 注：其中 `python-version`使用默认，将依据服务器python3版本建立虚拟环境；如果指定详细版本号，则程序自动安装并且创建相应版本号的虚拟环境(过程比较缓慢)
 
 ### 快速开始
 
@@ -93,6 +96,7 @@
 | /var/log/supervisor/              | 存放 supervisor 日志                       |
 | /etc/nginx/conf.d/                | 存放项目 nginx 配置文件                    |
 | /etc/supervisor/conf.d/           | 存放项目 supervisor 配置文件               |
+| /etc/python\<python-version\>     | 存放指定详细版本python安装文件             |
 
 
 
@@ -107,12 +111,18 @@
 
 ## 帮助
 
+- 配置文件中 `python-version`建议直接使用默认配置，如果发现使用默认配置代码不能正常运行(由于小版本号的库模块实现不同)
+  - 需要修改配置文件中 `python-version`为详细版本号， 重新运行本程序。
+  - 手动删除服务器错误的虚拟环境，即执行 `sudo rm -rf /home/.pyenvs/<web-name>`
+  - 执行代码一键更新脚本，拉取最新文件
+  - 执行执行一键修复脚本，更换python虚拟环境
 - 部署过程遇到错误 参考`help/deploy-questions.md`
 - Linux 相关操作 参考 `help/linux.md`
 
 ## TODO
 
-- [ ] 建立虚拟环境默认系统版本，与项目python版本号不一致
+- [x] 建立虚拟环境默认系统版本，与项目python版本号不一致
+- [ ] 优化脚本结构
 
 
 

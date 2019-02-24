@@ -1,4 +1,4 @@
-## 运行脚本不要乱用 sudo
+### 运行脚本不要乱用 sudo
 
 乱使用 sudo 会导致执行脚本中，例如含有 `$USER`  就会获取到 root 用户，导致出错，本来想获取登陆用户
 
@@ -46,4 +46,12 @@ $ python get-pip.py
 $ pip -V　　#查看pip版本
 ```
 
+### 脚本运行时间太长，后台运行
 
+> 后台运行脚本，并且输出到日志文件
+
+`nohup bash /home/GpsDisp/server-config/init_web.sh > ~/web_depoly_log.log 2>&1 &`
+
+查看运行的任务(只能看本机): `jobs`
+
+查看其他主机运行的任务:  `ps -aux|grep init_web.sh`

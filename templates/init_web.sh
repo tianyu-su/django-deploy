@@ -32,7 +32,7 @@ sudo ln -s $WEB_BASE_DIR"server-config/supervisor.conf" /etc/supervisor/conf.d/s
 sudo echo -e "[global]\nindex-url = <python-mirror>" | sudo tee /home/$USER/.pip/pip.conf
 
 # build python virtual env
-sudo virtualenv -p python3 --no-site-packages --download /home/.pyenvs/$WEB_NAME
+<create_python_environment_code>
 
 # install 3-rd libs
 sudo /home/.pyenvs/$WEB_NAME/bin/pip install -r $WEB_BASE_DIR"requestments.txt"

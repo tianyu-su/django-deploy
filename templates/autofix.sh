@@ -123,13 +123,13 @@ function check_virtualenv(){
     print_title "check virtualenv directory"
     if [ ! -d  "/home/.pyenvs/<web-name>" ]; then
         print_tip "python virtual enviroment not be created, begin creating ..."
-        exec_cmd "sudo virtualenv -p python3 --no-site-packages --download /home/.pyenvs/<web-name>"
+        exec_cmd "<create_python_environment_code>"
     fi
     print_title "check virtual python, pip"
     if [ ! -f  "/home/.pyenvs/<web-name>/bin/python" ] || [ ! -f  "/home/.pyenvs/<web-name>/bin/pip" ]; then
         print_tip "python virtual enviroment created fail, retry..."
         exec_cmd "sudo rm -rf /home/.pyenvs/<web-name>"
-        exec_cmd "sudo virtualenv -p python3 --no-site-packages --download /home/.pyenvs/<web-name>"
+        exec_cmd "<create_python_environment_code>"
     fi
 }
 
