@@ -122,6 +122,7 @@
 ## TODO
 
 - [x] 建立虚拟环境默认系统版本，与项目python版本号不一致
+- [ ] setting.py 自动修改 ALLOWED_HOSTS
 - [ ] 优化脚本结构
 
 
